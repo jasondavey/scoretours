@@ -20,7 +20,7 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="flex flex-col items-center justify-start px-6 py-12 space-y-6">
+      <section className="flex flex-col items-center justify-start px-6 py-12 space-y-6 flex-grow">
         <h2 className="text-3xl font-semibold text-center">
           Plan your ultimate football adventure with AI
         </h2>
@@ -30,12 +30,14 @@ export default function Home() {
         </p>
 
         <div className="w-full max-w-3xl">
-          <div className="relative h-80 w-full">
+          {/* Use a max-height constraint with auto height to limit vertical space */}
+          <div className="w-full max-h-96 overflow-hidden">
             <Image
               src="/assets/scoretours-hero.png"
               alt="ScoreTours hero grayscale illustration"
-              fill
-              className="object-contain rounded shadow"
+              width={1024}
+              height={768}
+              className="w-full object-contain max-h-96"
               sizes="(max-width: 768px) 100vw, 1024px"
               priority
             />
