@@ -8,3 +8,10 @@ dist/
 first_time_scripts.txt
 function.zip
 scripts
+.next/
+out/
+.vercel/
+coverage/
+*.local
+tailwind.config.js
+postcss.config.js
